@@ -12,4 +12,4 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${suraimuengine_SOURCE_DIR}/cmake")
 # SUBDIRECTORIES
 ###############################################################################
 add_subdirectory(libsuraimuengine)
-#add_subdirectory(tests)
+add_subdirectory(tests)

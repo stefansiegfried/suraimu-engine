@@ -4,27 +4,33 @@
 #include <SDL.h>
 #include <string>
 
-namespace suraimu
-{
+namespace suraimu {
 
-  class Game
-  {
-  public:
-    Game(const char *title = "Game Window", int width = 640, int height = 480, bool fullscreen = false);
-    ~Game();
-    int Init();
-    SDL_Renderer *GetRenderer();
+class Game {
+public:
+  // Constructor
+  Game(const char *title = "Game Window", int width = 640, int height = 480,
+       bool fullscreen = false);
+  
+  // Destructor
+  ~Game();
 
-  protected:
-    const char *game_window_title_;
-    const int game_window_width_;
-    const int game_window_height_;
-    const bool game_window_fullscreen_;
+  // Initializes SDL
+  int Init();
 
-    SDL_Window *game_window_ = nullptr;
-    SDL_Renderer *game_renderer_ = nullptr;
-    bool is_initialized_ = false;
-  };
+  // Returns a pointer to the SDL renderer
+  SDL_Renderer *GetRenderer();
+
+protected:
+  const char *game_window_title_;
+  const int game_window_width_;
+  const int game_window_height_;
+  const bool game_window_fullscreen_;
+
+  SDL_Window *game_window_ = nullptr;
+  SDL_Renderer *game_renderer_ = nullptr;
+  bool is_initialized_ = false;
+};
 
 } // namespace suraimu
 

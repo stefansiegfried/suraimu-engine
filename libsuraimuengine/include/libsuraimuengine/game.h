@@ -1,6 +1,9 @@
 #ifndef LIBSURAIMUENGINE_GAME_H_INCLUDED
 #define LIBSURAIMUENGINE_GAME_H_INCLUDED
 
+
+#include "libsuraimuengine/defaults.h"
+
 #include <SDL.h>
 #include <string>
 
@@ -9,7 +12,7 @@ namespace suraimu {
 class Game {
 public:
   // Constructor
-  Game(const char *title = "Game Window", int width = 640, int height = 480,
+  Game(const char *title = "Game Window", int width = GAMEWINDOW_WIDTH, int height = GAMEWINDOW_HEIGHT,
        bool fullscreen = false);
   
   // Destructor
